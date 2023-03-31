@@ -5,11 +5,11 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class CodeEntity(
-    @PrimaryKey (autoGenerate = false)
-    @ColumnInfo (name = "regionNumber")
+data class RegionNumberItem(
+    @PrimaryKey(autoGenerate = false)
+    @ColumnInfo(name = "regionNumber")
     val regionNumber: String,
 
-    @ColumnInfo (name = "regionName")
+    @ColumnInfo(name = "regionName")
     val regionName: String
 )

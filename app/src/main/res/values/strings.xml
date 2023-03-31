@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Turkey Regions</string>
+    <string name="region">регион</string>
+    <string name="type_region">Введите регион</string>
+    <string name="_00">00</string>
+    <string name="type_code">Введите код региона</string>
 </resources>

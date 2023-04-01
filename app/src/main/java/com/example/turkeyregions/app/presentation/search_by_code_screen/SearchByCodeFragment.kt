@@ -30,6 +30,11 @@ class SearchByCodeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setButtons()
         observeRegionName()
+        updateData()
+    }
+
+    private fun updateData() {
+        viewModel.updateRegions(requireContext())
     }
 
     private fun observeRegionName() {
@@ -55,9 +60,6 @@ class SearchByCodeFragment : Fragment() {
         val buttonsList = listOf("1", "2", "3", "4", "5", "6", "7", "8", "9", "C", "0", "🔍")
         buttonsAdapter.submitList(buttonsList)
 
-        binding.btnUpdateAll.setOnClickListener {
-            viewModel.updateRegions(requireContext())
-        }
 
     }
 

@@ -28,8 +28,6 @@ class RegionViewModel @Inject constructor(
     init {
         currentRegion.value = "Введите код региона"
         getAllRegions()
-
-
     }
 
 
@@ -59,15 +57,19 @@ class RegionViewModel @Inject constructor(
             val trCodes = networkService.getAllRegions().toMutableList()
             val ruCodes = networkService.getAllRuRegions()
 
-            for (i in trCodes.indices) {
-                trCodes[i] = trCodes[i].copy(name = "${trCodes[i].name} (${ruCodes[i].name})")
+
+            if (trCodes.size != 0) {
+                for (i in trCodes.indices) {
+                    trCodes[i] = trCodes[i].copy(name = "${trCodes[i].name} (${ruCodes[i].name})")
+                }
+                dao.deleteAllNumbers()
+                trCodes.forEach {
+                    dao.insertDynamicRegion(it.toDao())
+                }
+                getAllRegions()
             }
-            dao.deleteAllNumbers()
-            trCodes.forEach {
-                dao.insertDynamicRegion(it.toDao())
-            }
-            getAllRegions()
             isLoading.postValue(false)
+
             val message = if (trCodes.size == 0)
                 "Ошибка при загрузке данных!"
             else

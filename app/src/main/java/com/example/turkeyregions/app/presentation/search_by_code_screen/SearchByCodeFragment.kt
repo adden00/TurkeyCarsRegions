@@ -42,7 +42,7 @@ class SearchByCodeFragment : Fragment() {
             binding.tvRegionName.text = it ?: "Введите код региона"
         }
         viewModel.isLoading.observe(viewLifecycleOwner) {
-            binding.progressBar.visibility = if (it) View.VISIBLE else View.GONE
+            binding.progressBar.visibility = if (it) View.VISIBLE else View.INVISIBLE
         }
     }
 

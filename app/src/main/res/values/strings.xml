@@ -4,4 +4,5 @@
     <string name="type_region">Введите регион</string>
     <string name="_00">00</string>
     <string name="type_code">Введите код региона</string>
+    <string name="update_data">Обновить данные</string>
 </resources>

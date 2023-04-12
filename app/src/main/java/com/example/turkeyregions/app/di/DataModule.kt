@@ -15,7 +15,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class DataModule {
+object DataModule {
 
     @Provides
     @Singleton
@@ -27,7 +27,7 @@ class DataModule {
 
     @Provides
     @Singleton
-    fun provideApiClient() = Retrofit.Builder().baseUrl(Constants.BASE_URL)
+    fun provideApiClient(): CodesApiClient = Retrofit.Builder().baseUrl(Constants.BASE_URL)
         .addConverterFactory(GsonConverterFactory.create()).build()
         .create(CodesApiClient::class.java)
 

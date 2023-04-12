@@ -15,7 +15,7 @@ interface Dao {
 
 
     @Query("SELECT regionName FROM RegionNumberItem WHERE regionNumber is :regionNumber")
-    suspend fun getRegionName(regionNumber: String): String
+    suspend fun getRegionName(regionNumber: String): String?
 
     @Query("SELECT regionNumber FROM RegionNumberItem WHERE regionName is :regionName ")
     suspend fun getRegionNumber(regionName: String): String

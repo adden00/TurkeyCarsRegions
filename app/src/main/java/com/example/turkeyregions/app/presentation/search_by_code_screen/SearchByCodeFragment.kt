@@ -30,20 +30,21 @@ class SearchByCodeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setButtons()
         observeRegionName()
-        updateData()
+
     }
 
-    private fun updateData() {
-        viewModel.updateRegions(requireContext())
-    }
+
+//    private fun updateData() {
+//        viewModel.updateRegions(requireContext())
+//    }
 
     private fun observeRegionName() {
         viewModel.currentRegion.observe(viewLifecycleOwner) {
             binding.tvRegionName.text = it ?: "Введите код региона"
         }
-        viewModel.isLoading.observe(viewLifecycleOwner) {
-            binding.progressBar.visibility = if (it) View.VISIBLE else View.INVISIBLE
-        }
+//        viewModel.isLoading.observe(viewLifecycleOwner) {
+//            binding.progressBar.visibility = if (it) View.VISIBLE else View.INVISIBLE
+//        }
     }
 
     private fun setButtons() {

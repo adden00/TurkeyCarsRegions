@@ -24,31 +24,35 @@
 
         android:id="@+id/edRegionNumber"
         style="@style/text_header1"
-        android:paddingStart="16dp"
-        android:paddingBottom="5dp"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:autofillHints=""
         android:background="@drawable/code_bg"
-        android:enabled="false"
         android:ems="10"
+        android:enabled="false"
         android:gravity="center"
         android:hint="@string/_00"
         android:inputType="number"
         android:maxLength="2"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingStart="16dp"
+        android:paddingBottom="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcButtons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:foregroundGravity="bottom"
         app:layout_constraintBottom_toBottomOf="parent"
+
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegionName"
+        app:layout_constraintVertical_bias="1.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

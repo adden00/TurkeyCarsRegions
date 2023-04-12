@@ -30,12 +30,21 @@ class SearchByCodeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setButtons()
         observeRegionName()
+
     }
+
+
+//    private fun updateData() {
+//        viewModel.updateRegions(requireContext())
+//    }
 
     private fun observeRegionName() {
         viewModel.currentRegion.observe(viewLifecycleOwner) {
             binding.tvRegionName.text = it ?: "Введите код региона"
         }
+//        viewModel.isLoading.observe(viewLifecycleOwner) {
+//            binding.progressBar.visibility = if (it) View.VISIBLE else View.INVISIBLE
+//        }
     }
 
     private fun setButtons() {
@@ -51,6 +60,8 @@ class SearchByCodeFragment : Fragment() {
 
         val buttonsList = listOf("1", "2", "3", "4", "5", "6", "7", "8", "9", "C", "0", "🔍")
         buttonsAdapter.submitList(buttonsList)
+
+
     }
 
     private inner class ButtonListener : ButtonAdapter.Listener {

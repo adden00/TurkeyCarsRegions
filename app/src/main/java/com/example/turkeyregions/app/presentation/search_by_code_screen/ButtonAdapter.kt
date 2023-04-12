@@ -24,6 +24,8 @@ class ButtonAdapter(private val listener: Listener) :
             }
             if (item == "C")
                 binding.btn.setTextColor(binding.root.context.getColor(R.color.red))
+            else
+                binding.btn.setTextColor(binding.root.context.getColor(R.color.main_text_color))
         }
 
     }

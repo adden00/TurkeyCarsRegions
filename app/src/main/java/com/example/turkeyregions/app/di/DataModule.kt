@@ -1,8 +1,12 @@
 package com.example.turkeyregions.app.di
 
 import android.content.Context
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.example.turkeyregions.app.Constants
 import com.example.turkeyregions.data.local.RegionDataBase
+import com.example.turkeyregions.data.local.StringProvider
+import com.example.turkeyregions.data.local.StringProviderImpl
 import com.example.turkeyregions.data.network.CodesApiClient
 import dagger.Module
 import dagger.Provides
@@ -31,5 +35,7 @@ object DataModule {
         .addConverterFactory(GsonConverterFactory.create()).build()
         .create(CodesApiClient::class.java)
 
-
+    @Provides
+    fun provideStringProvider(@ApplicationContext context: Context): StringProvider =
+        StringProviderImpl(context)
 }

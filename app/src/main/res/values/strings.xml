@@ -1,8 +1,12 @@
 <resources>
-    <string name="app_name">Turkey Regions</string>
-    <string name="region">регион</string>
-    <string name="type_region">Введите регион</string>
-    <string name="_00">00</string>
-    <string name="type_code">Введите код региона</string>
-    <string name="update_data">Обновить данные</string>
+    <string name="app_name" translatable="false">Turkey Regions</string>
+    <string name="region">Region</string>
+    <string name="type_region">Input region</string>
+    <string name="_00" translatable="false">00</string>
+    <string name="type_code">Input region code</string>
+    <string name="update_data">update data</string>
+    <string name="wrong_region">Wrong region</string>
+    <string name="code_to_region">code->region</string>
+    <string name="region_to_code">region->code</string>
+
 </resources>

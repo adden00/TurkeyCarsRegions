@@ -3,8 +3,10 @@ package com.example.turkeyregions.app.presentation
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.turkeyregions.R
 import com.example.turkeyregions.data.local.Dao
 import com.example.turkeyregions.data.local.RegionNumberItem
+import com.example.turkeyregions.data.local.StringProvider
 import com.example.turkeyregions.data.mappers.toDao
 import com.example.turkeyregions.data.network.NetworkService
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -15,15 +17,16 @@ import javax.inject.Inject
 @HiltViewModel
 class RegionViewModel @Inject constructor(
     private val dao: Dao,
-    private val networkService: NetworkService
+    private val networkService: NetworkService,
+    private val stringProvider: StringProvider
 ) : ViewModel() {
 
-    val currentRegion = MutableLiveData<String>()
+    val currentRegion = MutableLiveData<String>() //string res
     val currentNumbers = MutableLiveData<List<RegionNumberItem>>(listOf())
     private val allNumbers = MutableLiveData<List<RegionNumberItem>>()
 
     init {
-        currentRegion.value = "Введите код региона"
+        currentRegion.value = stringProvider.provideString(R.string.type_code)
         updateRegions()
         getAllRegions()
 
@@ -32,11 +35,11 @@ class RegionViewModel @Inject constructor(
 
     fun searchCode(regionNumber: String) {
         if (regionNumber.length < 2)
-            currentRegion.value = "Введите код региона"
+            currentRegion.value = stringProvider.provideString(R.string.type_code)
         else {
             viewModelScope.launch {
                 val result = dao.getRegionName(regionNumber)
-                currentRegion.postValue(result ?: "Несуществующий регион")
+                currentRegion.postValue(result ?: stringProvider.provideString(R.string.wrong_region))
             }
         }
     }

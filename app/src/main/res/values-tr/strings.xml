@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="region">Bölge</string>
+    <string name="type_region">Bölgeyi girin</string>
+    <string name="type_code">Alan kodunu girin</string>
+    <string name="update_data">Verileri güncelle</string>
+    <string name="wrong_region">Var olmayan bölge</string>
+    <string name="region_to_code">bölge->kodu</string>
+    <string name="code_to_region">kodu->bölge</string>
+
+</resources>

@@ -9,6 +9,7 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.turkeyregions.R
 import com.example.turkeyregions.app.presentation.RegionViewModel
 import com.example.turkeyregions.databinding.FragmemtSearchByCodeBinding
 
@@ -40,7 +41,7 @@ class SearchByCodeFragment : Fragment() {
 
     private fun observeRegionName() {
         viewModel.currentRegion.observe(viewLifecycleOwner) {
-            binding.tvRegionName.text = it ?: "Введите код региона"
+            binding.tvRegionName.text = it ?: getString(R.string.type_code)
         }
 //        viewModel.isLoading.observe(viewLifecycleOwner) {
 //            binding.progressBar.visibility = if (it) View.VISIBLE else View.INVISIBLE

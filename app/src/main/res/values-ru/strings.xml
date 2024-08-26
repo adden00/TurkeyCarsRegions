@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="region">Регион</string>
+    <string name="type_region">Введите регион</string>
+    <string name="type_code">Введите код региона</string>
+    <string name="update_data">Обновить данные</string>
+    <string name="wrong_region">Несуществующий регион</string>
+    <string name="code_to_region">"    код->регион"</string>
+    <string name="region_to_code">"    регион->код"</string>
+</resources>

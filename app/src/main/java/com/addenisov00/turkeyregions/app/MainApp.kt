@@ -1,4 +1,4 @@
-package com.example.turkeyregions.app
+package com.addenisov00.turkeyregions.app
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

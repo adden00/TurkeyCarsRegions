@@ -1,12 +1,12 @@
-package com.example.turkeyregions.app.presentation.search_by_name_screen
+package com.addenisov00.turkeyregions.app.presentation.search_by_name_screen
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.turkeyregions.data.local.RegionNumberItem
-import com.example.turkeyregions.databinding.RegionItemBinding
+import com.addenisov00.turkeyregions.data.local.RegionNumberItem
+import com.addenisov00.turkeyregions.databinding.RegionItemBinding
 
 class RegionAdapter : ListAdapter<RegionNumberItem, RegionAdapter.ItemHolder>(object :
     DiffUtil.ItemCallback<RegionNumberItem>() {

@@ -1,8 +1,8 @@
-package com.example.turkeyregions.app.presentation
+package com.addenisov00.turkeyregions.app.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.turkeyregions.databinding.ActivityMainBinding
+import com.addenisov00.turkeyregions.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 

@@ -1,4 +1,4 @@
-package com.example.turkeyregions.data.local
+package com.addenisov00.turkeyregions.data.local
 
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy.Companion.REPLACE

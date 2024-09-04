@@ -1,4 +1,4 @@
-package com.example.turkeyregions.data.network
+package com.addenisov00.turkeyregions.data.network
 
 data class CodeNetworkItem(
     val code: String,

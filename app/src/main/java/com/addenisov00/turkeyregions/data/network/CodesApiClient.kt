@@ -1,4 +1,4 @@
-package com.example.turkeyregions.data.network
+package com.addenisov00.turkeyregions.data.network
 
 import retrofit2.http.GET
 

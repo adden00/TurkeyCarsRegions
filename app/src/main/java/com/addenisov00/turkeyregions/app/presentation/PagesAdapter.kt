@@ -1,4 +1,4 @@
-package com.example.turkeyregions.app.presentation
+package com.addenisov00.turkeyregions.app.presentation
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

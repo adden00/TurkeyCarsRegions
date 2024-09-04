@@ -1,4 +1,4 @@
-package com.example.turkeyregions.app.presentation.search_by_code_screen
+package com.addenisov00.turkeyregions.app.presentation.search_by_code_screen
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,9 +9,9 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.turkeyregions.R
-import com.example.turkeyregions.app.presentation.RegionViewModel
-import com.example.turkeyregions.databinding.FragmemtSearchByCodeBinding
+import com.addenisov00.turkeyregions.R
+import com.addenisov00.turkeyregions.app.presentation.RegionViewModel
+import com.addenisov00.turkeyregions.databinding.FragmemtSearchByCodeBinding
 
 class SearchByCodeFragment : Fragment() {
     private lateinit var binding: FragmemtSearchByCodeBinding

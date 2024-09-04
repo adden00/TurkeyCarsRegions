@@ -1,4 +1,4 @@
-package com.example.turkeyregions.app.presentation.search_by_name_screen
+package com.addenisov00.turkeyregions.app.presentation.search_by_name_screen
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import com.example.turkeyregions.app.presentation.RegionViewModel
-import com.example.turkeyregions.databinding.FragmemtSearchByNameBinding
+import com.addenisov00.turkeyregions.app.presentation.RegionViewModel
+import com.addenisov00.turkeyregions.databinding.FragmemtSearchByNameBinding
 
 class SearchByNameFragment : Fragment() {
     private var _binding: FragmemtSearchByNameBinding? = null

@@ -1,13 +1,11 @@
-package com.example.turkeyregions.app.di
+package com.addenisov00.turkeyregions.app.di
 
 import android.content.Context
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
-import com.example.turkeyregions.app.Constants
-import com.example.turkeyregions.data.local.RegionDataBase
-import com.example.turkeyregions.data.local.StringProvider
-import com.example.turkeyregions.data.local.StringProviderImpl
-import com.example.turkeyregions.data.network.CodesApiClient
+import com.addenisov00.turkeyregions.app.Constants
+import com.addenisov00.turkeyregions.data.local.RegionDataBase
+import com.addenisov00.turkeyregions.data.local.StringProvider
+import com.addenisov00.turkeyregions.data.local.StringProviderImpl
+import com.addenisov00.turkeyregions.data.network.CodesApiClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

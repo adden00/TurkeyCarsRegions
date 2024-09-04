@@ -1,4 +1,4 @@
-package com.example.turkeyregions.data.network
+package com.addenisov00.turkeyregions.data.network
 
 import android.util.Log
 import javax.inject.Inject

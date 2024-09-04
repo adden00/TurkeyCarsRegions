@@ -1,12 +1,12 @@
-package com.example.turkeyregions.app.presentation.search_by_code_screen
+package com.addenisov00.turkeyregions.app.presentation.search_by_code_screen
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.turkeyregions.R
-import com.example.turkeyregions.databinding.ButtonItemBinding
+import com.addenisov00.turkeyregions.R
+import com.addenisov00.turkeyregions.databinding.ButtonItemBinding
 
 class ButtonAdapter(private val listener: Listener) :
     ListAdapter<String, ButtonAdapter.ItemHolder>(object : DiffUtil.ItemCallback<String>() {

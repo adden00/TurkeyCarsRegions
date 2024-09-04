@@ -1,14 +1,14 @@
-package com.example.turkeyregions.app.presentation
+package com.addenisov00.turkeyregions.app.presentation
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.turkeyregions.R
-import com.example.turkeyregions.data.local.Dao
-import com.example.turkeyregions.data.local.RegionNumberItem
-import com.example.turkeyregions.data.local.StringProvider
-import com.example.turkeyregions.data.mappers.toDao
-import com.example.turkeyregions.data.network.NetworkService
+import com.addenisov00.turkeyregions.R
+import com.addenisov00.turkeyregions.data.local.Dao
+import com.addenisov00.turkeyregions.data.local.RegionNumberItem
+import com.addenisov00.turkeyregions.data.local.StringProvider
+import com.addenisov00.turkeyregions.data.mappers.toDao
+import com.addenisov00.turkeyregions.data.network.NetworkService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

@@ -10,3 +10,5 @@
 .cxx
 local.properties
 /key_car_numbers.jks
+/gradle/*
+/.idea/

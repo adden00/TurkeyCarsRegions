@@ -34,22 +34,14 @@ class SearchByCodeFragment : Fragment() {
 
     }
 
-
-//    private fun updateData() {
-//        viewModel.updateRegions(requireContext())
-//    }
-
     private fun observeRegionName() {
         viewModel.currentRegion.observe(viewLifecycleOwner) {
             binding.tvRegionName.text = it ?: getString(R.string.type_code)
         }
-//        viewModel.isLoading.observe(viewLifecycleOwner) {
-//            binding.progressBar.visibility = if (it) View.VISIBLE else View.INVISIBLE
-//        }
     }
 
     private fun setButtons() {
-        binding.edRegionNumber.requestFocus() // ставим курсор
+        binding.edRegionNumber.requestFocus()
         requireActivity().window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE) // открываем клаву
         binding.edRegionNumber.addTextChangedListener { text ->
             viewModel.searchCode(text?.toString()!!)
@@ -58,11 +50,8 @@ class SearchByCodeFragment : Fragment() {
         binding.rcButtons.layoutManager = GridLayoutManager(requireContext(), 3)
         binding.rcButtons.adapter = buttonsAdapter
 
-
         val buttonsList = listOf("1", "2", "3", "4", "5", "6", "7", "8", "9", "C", "0", "🔍")
         buttonsAdapter.submitList(buttonsList)
-
-
     }
 
     private inner class ButtonListener : ButtonAdapter.Listener {
@@ -72,8 +61,6 @@ class SearchByCodeFragment : Fragment() {
                 "🔍" -> binding.edRegionNumber.setText("")
                 else -> binding.edRegionNumber.setText(binding.edRegionNumber.text.toString() + item)
             }
-
-
         }
     }
 
